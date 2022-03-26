@@ -1,0 +1,11 @@
+CREATE TABLE student_details 
+(id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL,
+PASSWORD VARCHAR(100) NOT NULL,
+mobile BIGINT NOT NULL,
+UNIQUE(EMAIL),
+CHECK (LENGTH(PASSWORD) >= 8 AND LENGTH(MOBILE) = 10));
+
+INSERT INTO student_details (name,email,password,mobile) 
+VALUES('Loganathan','logu@gmail.com','123456789','7878787878');
